@@ -1,0 +1,60 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "allowImportExportEverywhere": false,
+    "codeFrame": false,
+    "ecmaFeatures": {
+      "jsx": true,
+      "destructuring": true
+    },
+    "ecmaVersion": 2018
+  },
+  "plugins": ["react", "jsx-a11y", "prettier", "react-hooks"],
+  "extends": ["plugin:react/recommended", "airbnb-base", "prettier"],
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+  "rules": {
+    "max-len": ["error", { "code": 80 }],
+    "prefer-promise-reject-errors": ["off"],
+    "react/jsx-filename-extension": ["off"],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/prop-types": ["warn"],
+    "react/destructuring-assignment": [2, "always"],
+    "no-return-assign": ["warn"],
+    "no-unused-vars": "warn",
+    "no-plusplus": "off",
+    "consistent-return": "off",
+    "prefer-destructuring": [
+      "error",
+      {
+        "VariableDeclarator": {
+          "array": true,
+          "object": true
+        }
+      },
+      {
+        "enforceForRenamedProperties": true
+      }
+    ],
+    "react/prefer-stateless-function": ["warn"],
+    "prettier/prettier": ["error"],
+    "jsx-a11y/label-has-associated-control": [
+      "error",
+      {
+        "required": {
+          "some": ["nesting", "id"]
+        }
+      }
+    ]
+  },
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect"
+    }
+  }
+}

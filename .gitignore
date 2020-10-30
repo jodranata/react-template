@@ -3,7 +3,5 @@ node_modules/
 
 # Misc
 yarn.lock
-.prettierrc
-.editorconfig
-.eslintrc
+
 
